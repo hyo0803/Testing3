@@ -2,7 +2,6 @@ import get
 import requests
 import json
 
-
 key = (get.get_key) # получение ключа 
 
 get_header_query = {"auth_key ": key, "filter": "my_pets"}
