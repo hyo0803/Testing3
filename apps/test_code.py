@@ -23,7 +23,7 @@ import put
 def get_fixture():
     get
     return True
-def test_get(get_fixture):
+def test_getf(get_fixture):
     assert get_fixture == 1, "GetKey Error"
 
 # get_list
@@ -112,8 +112,6 @@ def test_post( url, param, header, result ):
     else:
         print(" PostError")
 
-
-
 # GET
 key = '802cc048b84f7ca443618ce18ce9990bd8f3c2707e3331b69e848228'
 wrong_key = '12345'
@@ -123,7 +121,6 @@ request_url_list_of_pets = "https://petfriends1.herokuapp.com/api/pets?filter=my
 
 get_email_pass_header = { 'email':'petlover@ya.com', 'password':'123456' } # информация о пользователе, который значится в БД
 get_header_query_wrong = {"auth_key ": key, "filter": "pets"}
-
 
 @pytest.mark.parametrize('url, param, header, result',
                          [  # get_api_key
